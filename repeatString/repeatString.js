@@ -1,10 +1,9 @@
 function repeatString(str, t) {
-  result = '';
-  for (let i = 0; i >= t; i++) {
-  	result += " " + str;
-  }
-  return result;
-
+	let string = str;
+	if (t < 0) {
+		return 'ERROR';
+	}
+ 	return string.repeat(t);
 }
 
 module.exports = repeatString
