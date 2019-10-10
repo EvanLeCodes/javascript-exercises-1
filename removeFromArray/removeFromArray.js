@@ -1,7 +1,6 @@
-function removeFromArray(array, index) {
-	
-	return array.splice( array.indexOf(index),1);
-
+function removeFromArray(...args) {
+	const array = args[0];
+	return array.filter(val => !args.includes(val));
 }
 
 module.exports = removeFromArray

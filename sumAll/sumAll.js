@@ -1,5 +1,18 @@
-function sumAll(a,b) {
-	return math.range(a,b, true).reduce((a,b) => a + b, 0);
+function sumAll(min,max) {
+	if (min < 0 || max < 0) return "ERROR";
+	if (typeof min !== 'number' || typeof max !== 'number') return "ERROR";
+	if (min > max) {
+		const temp = min;
+		min = max;
+		max = temp;
+	}
+	let sum = 0;
+	for (let i = min; i < max + 1; i++) {
+		sum += i;
+	}
+	return sum;
+
+	//return Math.range(a,b, true);
 }
 
 module.exports = sumAll
